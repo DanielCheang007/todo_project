@@ -9,6 +9,8 @@ class Todo {
 		this.done = false
 
 		this._date = null
+
+		this.projectId = null
 	}
 
 	get date() {

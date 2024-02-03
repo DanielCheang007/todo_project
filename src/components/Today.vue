@@ -6,6 +6,10 @@
 
 	import AddTodayTodoForm from './AddTodayTodoForm.vue';
 
+	import moment from "moment"
+
+	const dateStr = moment(new Date()).format('M月D日 ‧ 今天 ‧ dddd')
+
 	const store = useTodos()
 	const { todayTodos, overdueTodos } = storeToRefs(store)
 	
@@ -20,19 +24,13 @@
 	</section>
 
 	<section>
-		<h3>{{ new Date() }}</h3>
+		<h3>{{ dateStr }}</h3>
 		<TodoListItem v-for="todo in todayTodos" :todo="todo"></TodoListItem>
 		<AddTodayTodoForm></AddTodayTodoForm>
 	</section>
 </template>
 
 <style scoped>
-	h3 {
-		color: #333;
-		font-weight: 600;
-		font-size: 1rem;
-	}
-
 	section {
 		margin-bottom: 2rem;
 	}

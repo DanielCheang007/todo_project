@@ -22,7 +22,9 @@ const todos = computed(() => findAllByProjectId(projectId.value))
 
 </script>
 <template>
-	<h2>Show {{ project?.name }}</h2>
+	<h2>Project #{{ project.id }}: {{ project?.name }}</h2>
+
+	<h3>Todos ({{ todos.length }})</h3>
 	
 	<TodoListItem v-for="todo in todos" :todo="todo"></TodoListItem>
 	<AddTodoForm :projectId="projectId"></AddTodoForm>

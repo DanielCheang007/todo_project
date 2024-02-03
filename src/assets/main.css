@@ -15,6 +15,14 @@ a,
   padding: 3px;
 }
 
+h3 {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
